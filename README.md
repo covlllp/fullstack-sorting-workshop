@@ -1,1 +1,2 @@
-# fullstack-sorting-workshop
+# sorting
+Sorting exercise
