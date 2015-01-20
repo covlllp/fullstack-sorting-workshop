@@ -13,18 +13,19 @@ describe('Bubble Sort', function() {
 	});
 	it('handles lots of objects in array', function() {
 		var arr = makeRandArray(50);
-		console.log("in");
-		console.log(arr);
-		console.log(arr.sort());
-		console.log(bubbleSort(arr));
-		console.log(arr);
-		console.log(arr.sort());
+		
 		expect( bubbleSort(arr)).toEqual(arr.sort(sortNumber));
 	});
 	it('handles lots of objects in array', function() {
 		var arr = makeRandArray(100);
 		expect( bubbleSort(arr)).toEqual(arr.sort(sortNumber));
 	});
+
+	it('handles an array of strings', function() {
+		var arr = ["hello", "world", "i", "am", "an", "array"];
+		expect( bubbleSort(arr)).toEqual(arr.sort());
+	});
+
 });
 
 describe('Merge Sort', function() {
@@ -46,12 +47,7 @@ describe('Merge Sort', function() {
 	});
 	it('handles lots of objects in array', function() {
 		var abc = makeRandArray(51);
-		// console.log("in");
-		// console.log(abc);
-		// console.log(abc.sort());
-		// console.log(mergeSort(abc));
-		// console.log(abc);
-		// console.log(abc.sort());
+		
 		expect( mergeSort(abc)).toEqual(abc.sort(sortNumber));
 	});
 	it('handles lots of objects in array', function() {
