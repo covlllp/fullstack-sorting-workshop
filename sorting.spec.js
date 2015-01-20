@@ -45,14 +45,21 @@ describe('Merge Sort', function() {
 		var arr = makeRandArray(10);
 		expect( mergeSort(arr)).toEqual(arr.sort(sortNumber));
 	});
+	
 	it('handles lots of objects in array', function() {
 		var abc = makeRandArray(51);
 		
 		expect( mergeSort(abc)).toEqual(abc.sort(sortNumber));
 	});
+	
 	it('handles lots of objects in array', function() {
 		var arr = makeRandArray(100);
 		expect( mergeSort(arr)).toEqual(arr.sort(sortNumber));
+	});
+
+	it('handles an array of strings', function() {
+		var arr = ["hello", "world", "i", "am", "an", "array"];
+		expect( mergeSort(arr)).toEqual(arr.sort());
 	});
 });
 
